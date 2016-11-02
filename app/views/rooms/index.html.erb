@@ -1,0 +1,10 @@
+<ul>
+    <% @rooms.each do |room| %>
+        <li><%= room.name %><li>
+    <% end %>
+</ul>
+
+<%= form_for :room, method: :post do |f| %>
+    <%= f.text_field :name, placeholder: 'Chatroom Name' %>
+    <%= f.submit 'Create' %>
+<% end %>
