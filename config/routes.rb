@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'logout' => 'home#logout'
+  post 'login' => 'home#login'
+
   get 'messages/index'
 
   get 'messages/create'
